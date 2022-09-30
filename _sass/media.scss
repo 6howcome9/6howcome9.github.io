@@ -1,8 +1,10 @@
 @media screen and (max-width: 480px) {
-  #nav_drawer {
-    // background-color: red;
+  div[role='document'] {
+    padding: 24px;
   }
+}
 
+@media screen and (max-width: 720px) {
   #nav_drawer:has(#nav_toggle:checked) {
     width: 100vw;
     border-right: none;
@@ -15,10 +17,6 @@
   #nav_toggle:checked ~ label[for='nav_toggle'] {
     left: auto;
     right: 0;
-  }
-
-  div[role='document'] {
-    padding: 24px;
   }
 }
 
