@@ -6,7 +6,7 @@ title: HOME
 <div class="flex center">
   <div>
     <h1>WELCOME!</h1>
-    <div class="flex gap-8 x-center">
+    <div class="flex gap-8 center">
       <a href="/about">ABOUT</a>
       <a href="/blog">BLOG</a>
     </div>

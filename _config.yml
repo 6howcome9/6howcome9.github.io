@@ -1,4 +1,5 @@
-title: PSY-WORLD 
+title: PSY-WORLD
+author: PSY 
 email: 6howcome9@gmail.com
 description: Welcome to PSY-WORLD
 baseurl: "" #
@@ -10,3 +11,15 @@ github_username:  jekyll
 sass:
   sass_dir: _sass
   style: compressed
+
+# settings
+# markdown: kramdown
+# highlighter: rouge
+# kramdown:
+#   input: GFM
+#   hard_wrap: false
+#   syntax_highlighter: rouge
+
+# plugins
+plugins:
+  - jekyll-toc  
