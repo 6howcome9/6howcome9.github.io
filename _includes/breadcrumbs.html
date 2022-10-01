@@ -1,9 +1,23 @@
-<div class="flex-x gap-8">
+<div class="flex-x gap-8 mb-8">
+  <!-- 1st -->
   <a href="/posts">Blog</a>
   <span>></span>
+  <!-- 2st -->
   {% if page.category %}
   <a href="/posts/{{page.category}}">{{page.category | capitalize }}</a>
   <span>></span>
   {% endif %}
+  <!-- for post -->
+  {% if page.layout == "post" %}
+  <a href="/posts/{{page.categories.first}}"
+    >{{ page.categories.first | capitalize}}</a
+  >
+  <span>></span>
+  <a href="/posts/{{page.categories.first}}/{{page.categories.last}}"
+    >{{ page.categories.last | capitalize}}</a
+  >
+  <span>></span>
+  {% endif %}
+  <!-- last slug -->
   <a href="{{page.url}}">{{page.title}}</a>
 </div>
