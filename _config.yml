@@ -23,3 +23,8 @@ sass:
 # plugins
 plugins:
   - jekyll-toc
+
+# toc plugin
+toc:
+  min_level: 2
+  max_level: 5
