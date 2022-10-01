@@ -5,6 +5,24 @@
 }
 
 @media screen and (max-width: 720px) {
+  #app-bar {
+    opacity: 1;
+  }
+
+  main {
+    height: calc(100vh - 56px);
+    top: 56px;
+  }
+
+  #nav_drawer:has(#nav_toggle:checked) ~ #app-bar {
+    opacity: 0;
+  }
+
+  #nav_drawer:has(#nav_toggle:checked) ~ main {
+    height: 100vh;
+    top: 0;
+  }
+
   #nav_drawer:has(#nav_toggle:checked) {
     width: 100vw;
     border-right: none;

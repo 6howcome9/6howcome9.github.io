@@ -1,3 +1,11 @@
+#app-bar {
+  height: 56px;
+  border-bottom: 1px solid lightblue;
+  opacity: 0;
+  transition: 0.7s cubic-bezier(0.075, 0.82, 0.165, 1);
+  overflow: hidden;
+}
+
 // nav_drawer
 #nav_drawer {
   width: 0;
@@ -62,7 +70,6 @@ main {
 
 main > aside {
   width: 256px;
-  height: calc(100vh - 56px);
   border-left: 1px solid lightblue;
 }
 
