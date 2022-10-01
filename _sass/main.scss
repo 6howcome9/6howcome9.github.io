@@ -9,6 +9,16 @@ body {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+a {
+  color: var(--color-text);
+
+  &:visited {
+    color: var(--color-text);
+  }
 }
 
 .w-full {

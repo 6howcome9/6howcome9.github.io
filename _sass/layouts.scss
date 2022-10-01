@@ -1,6 +1,6 @@
 #app-bar {
   height: 56px;
-  border-bottom: 1px solid lightblue;
+  border-bottom: 1px solid var(--color-border);
   opacity: 0;
   transition: 0.7s cubic-bezier(0.075, 0.82, 0.165, 1);
   overflow: hidden;
@@ -17,7 +17,7 @@
 
   &:has(#nav-toggle:checked) {
     width: 256px;
-    border-right: 1px solid lightblue;
+    border-right: 1px solid var(--color-border);
 
     & ~ main {
       width: calc(100vw - 256px);
@@ -41,6 +41,7 @@
       width: 24px;
       height: 2px;
       border-radius: 2px;
+      background-color: var(--color-toggle);
     }
 
     div + div {
@@ -116,14 +117,14 @@ main {
 
   & > aside {
     width: 256px;
-    border-left: 1px solid lightblue;
+    border-left: 1px solid var(--color-border);
   }
 
   & > div[role='document'] {
     flex: 1;
     margin: 48px;
     padding: 48px;
-    border: 1px solid lightblue;
+    border: 1px solid var(--color-border);
 
     position: relative;
 
@@ -142,7 +143,7 @@ main {
     &::-webkit-scrollbar-thumb {
       width: 8px;
       height: 8px;
-      background: lightblue;
+      background: var(--color-border);
     }
 
     /* Handle on hover */
@@ -150,6 +151,11 @@ main {
       background: lightcyan;
     }
   }
+}
+
+aside.categories {
+  padding: 0 24px 24px;
+  border-left: 1px solid var(--color-border);
 }
 
 footer {

@@ -3,28 +3,16 @@
   --color-bg: #000;
   --color-text: #fff;
   --color-toggle: #fff;
+  --color-border: #fff;
+  --color-link-hover: lightblue;
+  --color-link-active: cadetblue;
 }
 
 :root.light {
   --color-bg: #fff;
   --color-text: #000;
   --color-toggle: #000;
-}
-
-body {
-  background-color: var(--color-bg);
-  color: var(--color-text);
-}
-
-a {
-  color: var(--color-text);
-  &:visited {
-    color: var(--color-text);
-  }
-}
-
-#nav-drawer label[for='nav-toggle'] {
-  div {
-    background-color: var(--color-toggle);
-  }
+  --color-border: #000;
+  --color-link-hover: lightblue;
+  --color-link-active: cadetblue;
 }

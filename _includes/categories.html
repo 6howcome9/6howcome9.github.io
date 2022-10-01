@@ -1,8 +1,8 @@
-<aside>
-  <h3>Categories</h3>
+<aside class="categories">
+  <h3 class="mt-0">Categories</h3>
   {% assign sorted_sub = site.sub | sort: "order" %} {% for main_category in
   site.main %}
-  <details open>
+  <details open class="category-toggle">
     <summary>
       <a href="{{main_category.url}}">{{main_category.title}}</a>
     </summary>
@@ -16,6 +16,4 @@
     </ul>
   </details>
   {% endfor %}
-
-  <hr />
 </aside>
