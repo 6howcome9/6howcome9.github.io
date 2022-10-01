@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   position: relative;
   margin: 0;
@@ -5,16 +9,6 @@ body {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  background-color: black;
-  color: white;
-}
-
-a {
-  color: white;
-}
-
-a:visited {
-  color: white;
 }
 
 .w-full {
@@ -64,4 +58,8 @@ a:visited {
 .gap-8 {
   row-gap: 32px;
   column-gap: 32px;
+}
+
+.font-sm {
+  font-size: 12px;
 }

@@ -1,24 +1,31 @@
 window.onload = () => {
-  const $toggle = document.querySelector('#nav_toggle');
-
+  // navigation drawer
+  const $toggle = document.querySelector('#nav-toggle');
   if ($toggle) {
-    if (localStorage.getItem('isExpanded')) {
-      $toggle.checked = true;
-    } else {
-      $toggle.checked = false;
-    }
-
+    $toggle.checked = localStorage.getItem('isExpanded') === 'true';
+    // check screen width
     if (window.innerWidth < 920) {
-      $toggle.checked = false;
       localStorage.setItem('isExpanded', false);
+      $toggle.checked = false;
     }
+  }
+  // theme
+  document.documentElement.className = localStorage.getItem('colorTheme')
+    ? localStorage.getItem('colorTheme')
+    : 'dark';
+  const $theme = document.querySelector('#theme-toggle');
+  if ($theme) {
+    $theme.checked = localStorage.getItem('colorTheme') === 'light';
   }
 };
 
 function toggleHandler($toggle) {
-  if ($toggle.checked) {
-    localStorage.setItem('isExpanded', true);
-  } else {
-    localStorage.setItem('isExpanded', false);
-  }
+  localStorage.setItem('isExpanded', $toggle.checked);
+}
+
+function themeHandler($toggle) {
+  const theme = $toggle.checked ? 'light' : 'dark';
+
+  localStorage.setItem('colorTheme', theme);
+  document.documentElement.className = theme;
 }

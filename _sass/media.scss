@@ -14,7 +14,7 @@
     top: 56px;
   }
 
-  #nav_drawer:has(#nav_toggle:checked) {
+  #nav-drawer:has(#nav-toggle:checked) {
     width: 100vw;
     border-right: none;
 
@@ -33,8 +33,8 @@
     }
   }
 
-  #nav_toggle:checked {
-    & ~ label[for='nav_toggle'] {
+  #nav-toggle:checked {
+    & ~ label[for='nav-toggle'] {
       left: auto;
       right: 0;
     }

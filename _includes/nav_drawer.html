@@ -1,14 +1,20 @@
-<aside id="nav_drawer">
+<aside id="nav-drawer">
   <input
     type="checkbox"
-    id="nav_toggle"
+    id="nav-toggle"
     checked
     onchange="toggleHandler(this)"
   />
-  <label for="nav_toggle">
-    <img src="/assets/img/menu.svg" />
+  <label for="nav-toggle">
+    <div></div>
+    <div></div>
+    <div></div>
   </label>
   <div class="hidden">
+    <div class="color-theme-toggle">
+      <input type="checkbox" id="theme-toggle" onchange="themeHandler(this)" />
+      <span class="ml-2">Color</span>
+    </div>
     <div class="page-title flex-y center">
       <div class="profile rounded">
         <a href="/">

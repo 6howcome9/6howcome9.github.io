@@ -1,0 +1,30 @@
+:root,
+:root.dark {
+  --color-bg: #000;
+  --color-text: #fff;
+  --color-toggle: #fff;
+}
+
+:root.light {
+  --color-bg: #fff;
+  --color-text: #000;
+  --color-toggle: #000;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+a {
+  color: var(--color-text);
+  &:visited {
+    color: var(--color-text);
+  }
+}
+
+#nav-drawer label[for='nav-toggle'] {
+  div {
+    background-color: var(--color-toggle);
+  }
+}
