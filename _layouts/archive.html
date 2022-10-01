@@ -6,7 +6,9 @@
   <body>
     {% include nav_drawer.html %} {% include header.html %}
     <main>
-      <div role="document">{{ content }}</div>
+      <div role="document">
+        {% include breadcrumbs.html %} {% include posts.html %}
+      </div>
     </main>
     {% include footer.html %}
   </body>

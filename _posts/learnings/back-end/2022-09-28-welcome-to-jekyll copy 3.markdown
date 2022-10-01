@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
+title:  "back end"
 date:   2022-09-28 21:54:48 +0900
-category: jekyll
+categories: learnings back-end
 tags: tag1 tag2 tag3
 toc: true
 ---

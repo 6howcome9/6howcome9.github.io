@@ -2,23 +2,18 @@ title: PSY-WORLD
 author: PSY 
 email: 6howcome9@gmail.com
 description: Welcome to PSY-WORLD
+
 baseurl: "" #
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+url: ""
+permalink: /:categories/:title
+
+# github
+github_username:  6howcome9
 
 # style
 sass:
   sass_dir: _sass
   style: compressed
-
-# settings
-# markdown: kramdown
-# highlighter: rouge
-# kramdown:
-#   input: GFM
-#   hard_wrap: false
-#   syntax_highlighter: rouge
 
 # plugins
 plugins:
@@ -28,3 +23,11 @@ plugins:
 toc:
   min_level: 2
   max_level: 5
+
+collections:
+  main:
+    permalink: /posts/:name/
+    output: true
+  sub:
+    permalink: /posts/:categories/:name/
+    output: true

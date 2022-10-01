@@ -1,0 +1,12 @@
+<div class="flex-1">
+  {% for post in site.posts limit:5 %}
+  <li class="gap-8">
+    <span>{{ post.categories | first }}</span>
+    <span>{{ post.categories | last }}</span>
+    <a href="{{post.url}}">{{post.title}}</a>
+    <span>{{post.date|date:"%Y-%m-%d"}}</span>
+  </li>
+  {% endfor %}
+
+  <hr />
+</div>

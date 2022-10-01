@@ -11,8 +11,9 @@
           <img src="/assets/img/back.svg"
         /></a>
 
-        <b><span>{{ page.category }}</span></b>
-        {% for tag in page.tags %}
+        {% for category in page.categories %}
+        <span>{{category}}</span>
+        {% endfor %} {% for tag in page.tags %}
         <span>{{tag}}</span>
         {% endfor %}
 

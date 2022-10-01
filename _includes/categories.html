@@ -1,0 +1,22 @@
+<aside>
+  {{ page.slug }}
+  <h3>Categories</h3>
+  {% assign sorted_sub = site.sub | sort: "order" %} {% for main_category in
+  site.main %}
+  <details open>
+    <summary>
+      <a href="{{main_category.url}}">{{main_category.title}}</a>
+    </summary>
+    <ul>
+      {% for sub_category in sorted_sub %} {% if sub_category.category ==
+      main_category.slug %}
+      <li>
+        <a href="{{sub_category.url}}">{{sub_category.title}}</a>
+      </li>
+      {% endif %} {% endfor %}
+    </ul>
+  </details>
+  {% endfor %}
+
+  <hr />
+</aside>

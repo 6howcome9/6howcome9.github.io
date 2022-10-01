@@ -1,0 +1,10 @@
+<div class="flex-x gap-8">
+  <a href="/posts">Blog</a>
+  <span>></span>
+  {% if page.category %}
+  <div>??{{page}}</div>
+  <a href="/posts/{{page.category}}">{{page.category | capitalize }}</a>
+  <span>></span>
+  {% endif %}
+  <a href="{{page.url}}">{{page.title}}</a>
+</div>
