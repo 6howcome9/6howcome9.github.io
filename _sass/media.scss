@@ -14,27 +14,30 @@
     top: 56px;
   }
 
-  #nav_drawer:has(#nav_toggle:checked) ~ #app-bar {
-    opacity: 0;
-  }
-
-  #nav_drawer:has(#nav_toggle:checked) ~ main {
-    height: 100vh;
-    top: 0;
-  }
-
   #nav_drawer:has(#nav_toggle:checked) {
     width: 100vw;
     border-right: none;
+
+    & ~ #app-bar {
+      opacity: 0;
+    }
+
+    & ~ main {
+      height: 100vh;
+      top: 0;
+      display: none;
+    }
+
+    & ~ footer {
+      width: 100vw;
+    }
   }
 
-  #nav_drawer:has(#nav_toggle:checked) ~ main {
-    display: none;
-  }
-
-  #nav_toggle:checked ~ label[for='nav_toggle'] {
-    left: auto;
-    right: 0;
+  #nav_toggle:checked {
+    & ~ label[for='nav_toggle'] {
+      left: auto;
+      right: 0;
+    }
   }
 }
 
@@ -48,6 +51,7 @@
   #toc {
     width: 100%;
     height: fit-content;
+    float: none;
     position: static;
 
     border-top: 1px solid lightblue;

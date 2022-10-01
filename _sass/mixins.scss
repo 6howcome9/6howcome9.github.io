@@ -1,0 +1,70 @@
+// sizes
+$sizes: (0, 1, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 24);
+
+@mixin spacing($num) {
+  $size: $num * 4;
+
+  .m-#{$num} {
+    margin: $size + px;
+  }
+
+  .mx-#{$num} {
+    margin-left: $size + px;
+    margin-right: $size + px;
+  }
+
+  .my-#{$num} {
+    margin-top: $size + px;
+    margin-bottom: $size + px;
+  }
+
+  .ml-#{$num} {
+    margin-left: $size + px;
+  }
+
+  .mr-#{$num} {
+    margin-right: $size + px;
+  }
+
+  .mt-#{$num} {
+    margin-top: $size + px;
+  }
+
+  .mb-#{$num} {
+    margin-bottom: $size + px;
+  }
+
+  .p-#{$num} {
+    padding: $size + px;
+  }
+
+  .px-#{$num} {
+    padding-left: $size + px;
+    padding-right: $size + px;
+  }
+
+  .py-#{$num} {
+    padding-top: $size + px;
+    padding-bottom: $size + px;
+  }
+
+  .pl-#{$num} {
+    padding-left: $size + px;
+  }
+
+  .pr-#{$num} {
+    padding-right: $size + px;
+  }
+
+  .pt-#{$num} {
+    padding-top: $size + px;
+  }
+
+  .pb-#{$num} {
+    padding-bottom: $size + px;
+  }
+}
+
+@each $size in $sizes {
+  @include spacing($size);
+}

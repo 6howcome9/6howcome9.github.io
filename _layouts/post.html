@@ -7,6 +7,10 @@
     {% include nav_drawer.html %} {% include header.html %}
     <main>
       <div role="document">
+        <a href="javascript:history.back()">
+          <img src="/assets/img/back.svg"
+        /></a>
+
         <b><span>{{ page.category }}</span></b>
         {% for tag in page.tags %}
         <span>{{tag}}</span>
@@ -19,5 +23,6 @@
         <div class="post-content">{{ content | inject_anchors }}</div>
       </div>
     </main>
+    {% include footer.html %}
   </body>
 </html>
