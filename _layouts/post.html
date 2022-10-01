@@ -8,19 +8,19 @@
     <main>
       <div role="document">
         {% include breadcrumbs.html %}
-        <a href="javascript:history.back()">
-          <img src="/assets/img/back.svg"
-        /></a>
-
-        {% for category in page.categories %}
-        <span>{{category}}</span>
-        {% endfor %} {% for tag in page.tags %}
-        <span>{{tag}}</span>
-        {% endfor %}
-
-        <h1>{{page.title}}</h1>
-        <div>{{page.date}}</div>
-        <div>{{site.author}}</div>
+        <h1>
+          <a href="javascript:history.back()" class="mr-8">
+            <img src="/assets/img/back.svg" /></a
+          >{{page.title}}
+        </h1>
+        <div>Date: {{page.date}}</div>
+        <div>Author: {{site.author}}</div>
+        <div>
+          Tags: {% for tag in page.tags %}
+          <span>{{tag}}</span>
+          {% endfor %}
+        </div>
+        <hr class="my-8" />
         {{ content | toc_only }}
         <div class="post-content">{{ content | inject_anchors }}</div>
       </div>
