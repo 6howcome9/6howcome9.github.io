@@ -7,7 +7,10 @@
     {% include nav_drawer.html %} {% include header.html %}
     <main>
       <div role="document">
-        {% include breadcrumbs.html %} {% include posts.html %}
+        {% include breadcrumbs.html %}
+        <div class="flex-x">
+          {% include posts.html %} {% include categories.html %}
+        </div>
       </div>
     </main>
     {% include footer.html %}
