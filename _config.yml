@@ -22,4 +22,5 @@ sass:
 
 # plugins
 plugins:
-  - jekyll-toc  
+  - jekyll-toc
+  - jekyll-include-cache  
