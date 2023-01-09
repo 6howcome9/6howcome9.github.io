@@ -1,9 +1,9 @@
 ---
 layout: post
 title: 처음 배우는 엘릭서 프로그래밍
-date:   2023-01-05 08:40
-categories: learnings back-end
-tags: elixir
+date: 2023-01-05-THU
+categories: learnings elixir
+tags: functional elixir
 toc: true
 ---
 
