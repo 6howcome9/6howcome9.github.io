@@ -7,7 +7,7 @@ tags: nomadcoders typescript challenge
 toc: true
 ---
 
-## Polymorphism
+## 1. Polymorphism
 - Poly: many, several, multi
 - Morpho: form, structure
 
@@ -55,4 +55,30 @@ const jenny: Person<null> = {
   name: "Jenny",
   info: null
 }
+```
+
+## 2. Practice
+```ts
+// last(arr): 이 함수는 배열의 마지막 요소를 반환해야 합니다.
+function last<T>(arr: T[]): T {
+  return arr[arr.length - 1];
+}
+
+const lastTest1 = last([1, 2, 3]);
+const lastTest2 = last(["ㄱ", "ㄴ", "ㄷ"]);
+
+console.log(lastTest1);
+console.log(lastTest2);
+
+
+// prepend(arr, item): 이 함수는 배열의 시작 부분에 item을 넣고 return해야 합니다.
+function prepend<T>(arr: T[], item: T): T[] {
+  return [item, ...arr];
+}
+
+const prependTest1 = prepend([2, 3], 1);
+const prependTest2 = prepend(["나", "다"], "가");
+
+console.log(prependTest1);
+console.log(prependTest2);
 ```
